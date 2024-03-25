@@ -46,8 +46,8 @@ have choices for operations like back, quit and/or logout as appropriate.
 Finite State Machine (FSM) Model:
 1.	Initialization State:
 
-  	        •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
-                •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
+  	•	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
+        •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
 
 3.	Manager Panel:
         •	Purpose: Manager-specific operations like modifying sale prices, receiving shipments, and freezing/unfreezing client accounts.
