@@ -43,3 +43,43 @@ the client-menu panel.
 6. Each panel or sub-panel corresponds to a state of the FSM. All operations do not need have
 a separate panel; simple operations can be done without a change of state. Each panel will
 have choices for operations like back, quit and/or logout as appropriate.
+
+----------------------------------------------------------------------------------------
+Finite State Machine (FSM) Model:
+1.	Initialization State:
+        •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
+        •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
+2.	Manager Panel:
+        •	Purpose: Manager-specific operations like modifying sale prices, receiving shipments, and freezing/unfreezing client accounts.
+        •	Transitions: Options to enter a password for confirmation or transition to Logout State.
+3.	Salesclerk Panel:
+        •	Purpose: Salesclerk-specific operations such as printing product lists, adding clients/products, and loading the database.
+        •	Transitions: Options to switch to Client Panel, enter a password to become a manager, or transition to Logout State.
+4.	Client Panel:
+        •	Purpose: Client-specific operations including viewing account, placing orders, checking product prices, and modifying the shopping cart.
+        •	Transitions: Options to go to sub-panels (e.g., Edit Personal Info), switch to Salesclerk Panel, or logout.
+5.	Sub-panel (e.g., Edit Personal Info):
+        •	Purpose: Sub-panel for detailed operations related to the client's account.
+        •	Transitions: Options for specific operations (e.g., show invoices, show payments) and the ability to go back to the Client Panel.
+6.	Logout State:
+        •	Purpose: State for logging out of the system and transitioning back to the Initialization State.
+        •	Transitions: Options to logout and return to the Initialization State or quit the system.
+
+----------------------------------------------------------------------------------------
+State Transition Diagram:
+
+![image](https://github.com/DWright91/Warehouse-Database-System-FSM-GUI-Java/assets/94549091/e9e23289-1a57-4fff-bb27-50a69eac3068)
+
+ 
+Aspects Not Fitting FSM Definition:
+1.	Dynamic User Inputs: FSMs traditionally don't handle dynamic inputs well. To incorporate this, use a stack-based system to manage dynamic input contexts within a state.
+2.	Password Verification: FSMs typically don't handle complex input verification. Use callbacks or external systems for password verification, possibly asynchronous, and update the FSM based on the verification result.
+3.	Conditional Operations: Some operations depend on conditions (e.g., becoming a client or salesclerk). These conditions can be managed by introducing additional states or by dynamically altering state transition rules.
+Plan to Incorporate:
+1.	Dynamic Inputs: Implement a context or stack system to manage dynamic inputs. Each state can push or pop contexts, allowing the FSM to adapt to varying input requirements.
+2.	External Verification: Utilize callbacks or interfaces to external systems for complex operations like password verification. Ensure the FSM updates accordingly based on the results.
+3.	Conditional Operations: Introduce additional states or dynamically alter transition rules based on conditions. For instance, a conditional transition from Salesclerk Panel to Client Panel based on the "become a client" option.
+
+
+
+
