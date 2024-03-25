@@ -46,38 +46,39 @@ have choices for operations like back, quit and/or logout as appropriate.
 Finite State Machine (FSM) Model:
 1.	Initialization State:
 
-  	•	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
+  	        •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
 
-  	•	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
+  	        •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
 
-3.	Manager Panel:
+2.	Manager Panel:
 
-  	•	Purpose: Manager-specific operations like modifying sale prices, receiving shipments, and freezing/unfreezing client accounts.
+  	        •	Purpose: Manager-specific operations like modifying sale prices, receiving shipments, and freezing/unfreezing client accounts.
 
-  	•	Transitions: Options to enter a password for confirmation or transition to Logout State.
+  	        •	Transitions: Options to enter a password for confirmation or transition to Logout State.
   	
-5.	Salesclerk Panel:	
+3.	Salesclerk Panel:	
 
-  	•	Purpose: Salesclerk-specific operations such as printing product lists, adding clients/products, and loading the database.
+  	        •	Purpose: Salesclerk-specific operations such as printing product lists, adding clients/products, and loading the database.
 
-  	•	Transitions: Options to switch to Client Panel, enter a password to become a manager, or transition to Logout State.
+  	        •	Transitions: Options to switch to Client Panel, enter a password to become a manager, or transition to Logout State.
   	
-7.	Client Panel:	
+4.	Client Panel:	
 
-  	•	Purpose: Client-specific operations including viewing account, placing orders, checking product prices, and modifying the shopping cart.
+  	        •	Purpose: Client-specific operations including viewing account, placing orders, checking product prices, and modifying the shopping cart.
 
-  	•	Transitions: Options to go to sub-panels (e.g., Edit Personal Info), switch to Salesclerk Panel, or logout.
+  	        •	Transitions: Options to go to sub-panels (e.g., Edit Personal Info), switch to Salesclerk Panel, or logout.
   	
-9.	Sub-panel (e.g., Edit Personal Info):
-        •	Purpose: Sub-panel for detailed operations related to the client's account.
+5.	Sub-panel (e.g., Edit Personal Info):
 
-  	•	Transitions: Options for specific operations (e.g., show invoices, show payments) and the ability to go back to the Client Panel.
+                •	Purpose: Sub-panel for detailed operations related to the client's account.
 
-11.	Logout State:
+  	        •	Transitions: Options for specific operations (e.g., show invoices, show payments) and the ability to go back to the Client Panel.
 
-   	•	Purpose: State for logging out of the system and transitioning back to the Initialization State.
+6.	Logout State:
 
-   	•	Transitions: Options to logout and return to the Initialization State or quit the system.
+   	        •	Purpose: State for logging out of the system and transitioning back to the Initialization State.
+
+   	        •	Transitions: Options to logout and return to the Initialization State or quit the system.
 
 ----------------------------------------------------------------------------------------
 State Transition Diagram:
