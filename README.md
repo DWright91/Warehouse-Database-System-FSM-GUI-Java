@@ -89,6 +89,7 @@ Aspects Not Fitting FSM Definition:
 1.	Dynamic User Inputs: FSMs traditionally don't handle dynamic inputs well. To incorporate this, use a stack-based system to manage dynamic input contexts within a state.
 2.	Password Verification: FSMs typically don't handle complex input verification. Use callbacks or external systems for password verification, possibly asynchronous, and update the FSM based on the verification result.
 3.	Conditional Operations: Some operations depend on conditions (e.g., becoming a client or salesclerk). These conditions can be managed by introducing additional states or by dynamically altering state transition rules.
+
 Plan to Incorporate:
 1.	Dynamic Inputs: Implement a context or stack system to manage dynamic inputs. Each state can push or pop contexts, allowing the FSM to adapt to varying input requirements.
 2.	External Verification: Utilize callbacks or interfaces to external systems for complex operations like password verification. Ensure the FSM updates accordingly based on the results.
