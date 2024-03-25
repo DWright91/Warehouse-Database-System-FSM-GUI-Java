@@ -47,8 +47,8 @@ have choices for operations like back, quit and/or logout as appropriate.
 ----------------------------------------------------------------------------------------
 Finite State Machine (FSM) Model:
 1.	Initialization State:
-        •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
-        •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
+                •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
+                •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
 2.	Manager Panel:
         •	Purpose: Manager-specific operations like modifying sale prices, receiving shipments, and freezing/unfreezing client accounts.
         •	Transitions: Options to enter a password for confirmation or transition to Logout State.
@@ -70,7 +70,7 @@ State Transition Diagram:
 
 ![image](https://github.com/DWright91/Warehouse-Database-System-FSM-GUI-Java/assets/94549091/e9e23289-1a57-4fff-bb27-50a69eac3068)
 
- 
+ ----------------------------------------------------------------------------------------
 Aspects Not Fitting FSM Definition:
 1.	Dynamic User Inputs: FSMs traditionally don't handle dynamic inputs well. To incorporate this, use a stack-based system to manage dynamic input contexts within a state.
 2.	Password Verification: FSMs typically don't handle complex input verification. Use callbacks or external systems for password verification, possibly asynchronous, and update the FSM based on the verification result.
