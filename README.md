@@ -46,9 +46,9 @@ have choices for operations like back, quit and/or logout as appropriate.
 Finite State Machine (FSM) Model:
 1.	Initialization State:
 
-  	        •	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
+  	•	Purpose: Initial state where the user is prompted to choose the type of user (manager, salesclerk, or client) and provide a username and password.
 
-  	        •	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
+  	•	Transitions: Based on user input, transitions to Manager Panel, Salesclerk Panel, or Client Panel.
 
 3.	Manager Panel:
 
@@ -93,7 +93,3 @@ Plan to Incorporate:
 1.	Dynamic Inputs: Implement a context or stack system to manage dynamic inputs. Each state can push or pop contexts, allowing the FSM to adapt to varying input requirements.
 2.	External Verification: Utilize callbacks or interfaces to external systems for complex operations like password verification. Ensure the FSM updates accordingly based on the results.
 3.	Conditional Operations: Introduce additional states or dynamically alter transition rules based on conditions. For instance, a conditional transition from Salesclerk Panel to Client Panel based on the "become a client" option.
-
-
-
-
