@@ -15,15 +15,15 @@ be invoked from the UI.
 on who has logged in:
 
     • The client panel can do only the client operations: View the account, put in an order,
-      check the price of a product, modify the shopping cart, etc.
+          check the price of a product, modify the shopping cart, etc.
    
     • The salesclerk panel operations are: Print a list of all products with quantity on hand, add
-      a client, add a product, load database, and any other ops except the ones listed as manager
-      ops.
+          a client, add a product, load database, and any other ops except the ones listed as manager
+          ops.
    
     • The manager operations: Modify the sale price of an item, recieve a shipment, and
-      freeze(block all future order processing)/unfreeze a client’s account. All manager operations
-      need a password for confirmation.
+          freeze(block all future order processing)/unfreeze a client’s account. All manager operations
+          need a password for confirmation.
 
 4. A salesclerk menu also provides an option to “become a client”. If this is chosen, the system
 asks for a clientID and if it is valid, switches the menu to the client menu. The salesclerk can
