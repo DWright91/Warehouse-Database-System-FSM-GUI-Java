@@ -1,6 +1,6 @@
 # Warehouse Database System FSM modeled MPIS
 
-Purpoose: Design and create a warehouse database system that uses a Multi Panel Interactive System (MPIS) modeled using a finite state machine (FSM).
+Purpose: Design and create a warehouse database system that uses a Multi Panel Interactive System (MPIS) modeled using a finite state machine (FSM).
 
 1. The system has three kinds of users: manager, salesclerk, and client. The first panel will ask
 what kind of user is accessing the system - manager, salesperson or client, and also ask for a
